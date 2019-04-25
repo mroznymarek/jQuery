@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+	<title>Zadanie 4a. Odczyt i modyfikacja atrybutów i właściwości elementów HTML</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="Author" content="Łukasz Krawczyk (Web Developer / Graphic &amp; Web Designer)" />
+	
+	<style>
+		td img:hover { cursor: pointer; }
+	</style>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<script>
+		$(function() {
+			$('td img').click(function() {
+				var source = $(this).attr('src').replace('100x75', '400x300');
+				var altText = $(this).attr('alt');
+				$('div img').attr({'src': source, 'alt': altText});
+			});
+		});
+	</script>
+	
+</head>
+<body>
+	
+	<table>
+		<tbody>
+			<tr>
+				<td><img src="100x75/chrysanthemum.jpg" alt="Chrysanthemum" /></td>
+				<td><img src="100x75/desert.jpg" alt="Desert" /></td>
+				<td><img src="100x75/hydrangeas.jpg" alt="Hydrangeas" /></td>
+				<td><img src="100x75/jellyfish.jpg" alt="Jellyfish" /></td>
+				<td><img src="100x75/koala.jpg" alt="Koala" /></td>
+				<td><img src="100x75/lighthouse.jpg" alt="Lighthouse" /></td>
+				<td><img src="100x75/penguins.jpg" alt="Penguins" /></td>
+				<td><img src="100x75/tulips.jpg" alt="Tulips" /></td>
+			</tr>
+		</tbody>
+	</table>
+	<div><img src="#" alt="" /></div>
+	
+</body>
+</html>
