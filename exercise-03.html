@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+
+    <title>Zadanie 3a. Odczyt i modyfikacja wyglądu elementów HTML</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Author" content="Łukasz Krawczyk (Web Developer / Graphic &amp; Web Designer)" />
+
+    <style>
+        div {
+            width: 300px;
+            height: 175px;
+            border: 3px solid #fff;
+            border-radius: 25px;
+            box-shadow: 5px 5px 5px #ccc;
+            margin-bottom: 10px;
+        }
+
+        #yellow {
+            background-color: #ff0;
+        }
+
+        #orange {
+            background-color: #f60;
+        }
+
+        #red {
+            background-color: #f00;
+        }
+
+        #black {
+            background-color: #000;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+
+        $(function () {
+            $('div').mouseover(function() {
+                const color = $(this).css('background-color')
+                $('body').css('background-color', color)
+            })
+            $('div').mouseout(function(){
+                $('body').css('background-color', 'white')
+            })
+        });
+    </script>
+
+</head>
+
+<body>
+
+    <div id="yellow"></div>
+    <div id="orange"></div>
+    <div id="red"></div>
+    <div id="black"></div>
+
+</body>
+
+</html>
