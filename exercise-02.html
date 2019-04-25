@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+
+	<title>Zadanie 2. Obsługa zdarzeń</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta name="Author" content="Łukasz Krawczyk (Web Developer / Graphic &amp; Web Designer)" />
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	
+	<script>
+		$(document).ready(() => {
+            $('p').click(() => {
+                $('p').hide();
+            })
+            $('h1').click(() => {
+                $('p').show();
+            })
+        })
+	</script>
+	
+</head>
+<body>
+	
+	<h1>Nagłówek</h1>
+	<p>Akapit pierwszy</p>
+	<p>Akapit drugi</p>
+	<p>Akapit trzeci</p>
+
+</body>
+</html>
